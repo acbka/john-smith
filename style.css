@@ -30,6 +30,7 @@ h1{
      margin: 0;
      padding: 0;
      text-align: center;
+     background-clip: text;
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent; 
 } 
@@ -311,7 +312,7 @@ textarea.form-text-size{
      color: #494949;
      letter-spacing: 1px;
      line-height: 30px;
-     padding: 70px 0 95px 0;
+     padding: 70px 0;
      text-align: center;
 }
 
