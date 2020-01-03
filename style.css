@@ -83,6 +83,7 @@ ul{
    padding: 100px 0;
    text-align: center;
    text-transform: uppercase;  
+   margin-top: 100px;
 }
 .text-name{
    color: #fff;
@@ -314,6 +315,41 @@ textarea.form-text-size{
    line-height: 30px;
    padding: 70px 0;
    text-align: center;
+}
+.scroll_top {
+   position: fixed;
+   bottom: -55px;
+   right: 20px;
+   width: 55px;
+   height: 55px;
+   border: none;
+   border-radius: 50%;
+   background: #a91aef;
+   z-index: 100; 
+   outline: none; 
+   cursor: pointer;
+   transition: 0.4s; 
+}
+.scroll_top:after {
+   content: "";
+   width: 15px;
+   height: 15px;
+   border-top: 2px solid #fff; 
+   border-left: 2px solid #fff; 
+   transform: rotate(45deg); 
+   position: absolute;
+   top: 7px;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+.scroll_top.show{
+   bottom: 30px;
+}
+.scroll_top:active, .scroll_top:focus
+{
+   outline: none; 
 }
 
 @media (max-width: 1200px){
