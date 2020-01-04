@@ -8,7 +8,6 @@ html{
 }
 body{
    font-family: Avant Garde CE, Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-
 }
 .container{
    max-width: 1200px; 
@@ -17,9 +16,12 @@ body{
    max-width: 1600px;
 }
 a:hover{
-   color: #e3f6fc;
+   color: #ff0072;
    text-decoration: none;
-} 
+}
+a.active{
+   color: #a21af0;
+}
 h1{
    background: linear-gradient(to right top, #a21af0 20%, #ff0072 80%);
    font-size: 13rem;
@@ -64,6 +66,9 @@ h5{
 }
 ul{
    list-style: none;
+}
+.li{
+   max-height: 1.1rem;
 }
 .li-style::before{    
    color: #fff;  
@@ -237,8 +242,11 @@ ul{
    padding-right: 0;
    text-transform: uppercase;
 }
-.active, .nav-link:hover{
+.nav-link:active{
    color: #a91aef;
+}
+.nav-link:hover{
+   color: #ff0072;
 }
 .portfolio-gallery{
    margin-left: -60px;
@@ -332,7 +340,7 @@ textarea.form-text-size{
    height: 55px;
    border: none;
    border-radius: 50%;
-   background: #a91aef;
+   background: #a21af0;
    z-index: 100; 
    outline: none; 
    cursor: pointer;
@@ -360,7 +368,10 @@ textarea.form-text-size{
    outline: none; 
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1199px){
+   .item{
+      line-height: 2rem;
+   }
    .john-skills{
       text-align: left;
    } 

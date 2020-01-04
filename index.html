@@ -16,7 +16,7 @@
 </head>
 
 <body>
-   <header class="main-head">
+   <header class="main-head" id="home">
       <nav class="navbar navbar-expand-xl fixed-top menu">
          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContent"
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,13 +24,13 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="nav navbar-nav mx-auto">
-               <li><a class="item active" href="#">HOME</a></li>
-               <li class="li-style"><a class="item" href="#">ABOUT</a></li>
-               <li class="li-style"><a class="item" href="#">OUR SERVICES</a></li>
-               <li class="li-style"><a class="item" href="#">PORTFOLIO</a></li>
-               <li class="li-style"><a class="item" href="#">EXPERIENCE</a></li>
-               <li class="li-style"><a class="item" href="#">BLOG</a></li>
-               <li class="li-style"><a class="item" href="#">CONTACT</a></li>
+               <li class="li-style"><a class="item active" href="#home">HOME</a></li>
+               <li class="li-style"><a class="item" href="#about">ABOUT</a></li>
+               <li class="li-style"><a class="item" href="#service">OUR SERVICES</a></li>
+               <li class="li-style"><a class="item" href="#portfolio">PORTFOLIO</a></li>
+               <li class="li-style"><a class="item" href="#experience">EXPERIENCE</a></li>
+               <li class="li-style"><a class="item" href="#blog">BLOG</a></li>
+               <li class="li-style"><a class="item" href="#contact">CONTACT</a></li>
             </ul>
          </div>
       </nav>
@@ -44,7 +44,7 @@
          </div>
       </div>
    </header>
-   <div class="container john">
+   <div class="container john" id="about">
       <div class="row">
          <div class="col-lg-4 john-title">
             <h2 class="john-name margin-style">JOHN SMITH</h2>
@@ -68,7 +68,7 @@
          </div>
       </div>
    </div>
-   <div class="container-fluid contacts">
+   <div class="container-fluid contacts" id="contact">
       <div class="container">
          <div class="row">
             <div class="col-xl-4 contacts-block">
@@ -110,7 +110,7 @@
          </div>
       </div>
    </div>
-   <div class="service">
+   <div class="service" id="service">
       <div class="container">
          <h2>Our services</h2>
          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -183,7 +183,7 @@
          </div>
       </div>
    </div>
-   <div class="portfolio container-fluid">
+   <div class="portfolio container-fluid" id="portfolio">
       <h2 class="text-center">portfolio</h2>
       <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
       <br>
@@ -226,7 +226,7 @@
          </div>
       </div>
    </div>
-   <div class="container-fluid experience">
+   <div class="container-fluid experience" id="experience">
       <h2 class="text-center white">experience</h2>
       <p class="subtitle text-center white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
       <div class="container">
@@ -276,7 +276,7 @@
          </div>
       </div>
    </div>
-   <div class="blog">
+   <div class="blog" id="blog">
       <div class="container">
          <h2 class="text-center">blog</h2>
          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -336,7 +336,9 @@
    <footer class="footer">
       <p>Copyright 2018 by psd.in.ua All Rights Reserved</p>
    </footer>
-   <button class="scroll_top"></button>
+   <!--
+   <button class="scroll_top"></button> 
+   -->
    <script src="./script.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
