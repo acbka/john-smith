@@ -111,12 +111,24 @@ ul{
    padding-bottom: 50px;   
 }
 .main-button{
-   background: url(img/Rectangle5.png);
-   border: none;
+   background: url(./img/Rectangle5.png);
+   border-right: 2px solid #ff0072;
+   border-top: 2px solid #ff0072;
+   border-bottom: 2px solid #a21af0;
+   border-left: 2px solid #a21af0;
    color: #fff;
    height: 70px;
    text-transform: uppercase;
    width: 210px;
+}
+.main-button:hover,
+.main-button:active
+{
+   background: url(./img/Rectangle6.png);
+   border-left: 2px solid #ff0072;
+   border-bottom: 2px solid #ff0072;
+   border-top: 2px solid #a21af0;
+   border-right: 2px solid #a21af0;
 }
 .john{
    color: 494949;
