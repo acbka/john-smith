@@ -1,7 +1,10 @@
 // go to top
 const scrollButton = document.querySelector(".scroll_top");
 
-let hash = "#home"
+window.onload = function() {
+   item = document.querySelector(".active");
+   scrollMenu(item);
+ };
 
 function goToTop() {
    window.addEventListener("scroll", showScroll);
@@ -61,6 +64,7 @@ function scrollMenu(item) {
    requestAnimationFrame(step);
 
    function step(time) {
+      let menuHeight = document.querySelector(".menu").offsetHeight;
       if (start === null) start = time;
       let progress = time - start;
       r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
@@ -68,12 +72,7 @@ function scrollMenu(item) {
       if (r != w + t) {
          requestAnimationFrame(step)
       } else { 
-         if (window.innerWidth > 1199) {
-            window.scrollTo(0, t + w - 80)
-         } else {
-            window.scrollTo(0, t + w - 50);
-         }
-         
+         window.scrollTo(0, t + w - menuHeight)
          //location.hash = hash  -  URL с хэшем если меню не fixed
       }
    };
