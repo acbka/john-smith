@@ -81,11 +81,25 @@ function scrollMenu(item) {
       }
    };
 }
-
-
+/*
+$(window).scroll(function () {
+   var fromTop = $(this).scrollTop() + menuHeight;
+   console.log(this, fromTop)
+   var cur = scrollItems.map(function () {
+      if ($(this).offset().top < fromTop)
+         return this;
+   });
+   cur = cur[cur.length - 1];
+   var id = cur && cur.length ? cur[0].id : "";
+   if (lastId !== id) {
+      lastId = id;
+      menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#" + id + "']").parent().addClass("active");
+   }
+});
+*/
 
 activeMenuItem()
 //goToTop()
 
-
-scrollMenu()
