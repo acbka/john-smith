@@ -1,4 +1,5 @@
 // go to top
+/*
 const scrollButton = document.querySelector(".scroll_top");
 
 window.onload = function() {
@@ -30,6 +31,9 @@ function goUp() {
    document.querySelector(".active").classList.remove("active");
    document.querySelector('[href="#home"]').classList.add("active");
 }
+*/
+
+
 
 // active menu item
 
@@ -64,7 +68,7 @@ function scrollMenu(item) {
    requestAnimationFrame(step);
 
    function step(time) {
-      let menuHeight = document.querySelector(".menu").offsetHeight;
+      let menuHeight = document.querySelector(".nav-menu").offsetHeight;
       if (start === null) start = time;
       let progress = time - start;
       r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
@@ -82,3 +86,6 @@ function scrollMenu(item) {
 
 activeMenuItem()
 //goToTop()
+
+
+scrollMenu()
