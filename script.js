@@ -1,41 +1,9 @@
-// go to top
-
-const scrollButton = document.querySelector(".scroll_top");
+// load website
 
 window.onload = function() {
    item = document.querySelector(".active");
    scrollMenu(item);
  };
-
-
-/*
-function goToTop() {
-   window.addEventListener("scroll", showScroll);
-   scrollButton.addEventListener("click", goUp);
-}
-
-function showScroll() {
-   let scrolled = window.scrollY + 200;
-   let y = document.documentElement.clientHeight;
-
-   if (scrolled > y) {
-      scrollButton.classList.add("show");
-   } else {
-      scrollButton.classList.remove("show");
-   }
-}
-
-function goUp() {
-   if (window.pageYOffset > 0) {
-      window.scrollBy(0, -80);
-      setTimeout(goUp, 0);
-   };
-   document.querySelector(".active").classList.remove("active");
-   document.querySelector('[href="#home"]').classList.add("active");
-}
-*/
-
-
 
 // active menu item
 
@@ -46,19 +14,15 @@ let anchors = menuItems.map(el => {
    return hash;
 })
 
+let sections = anchors.map(hash => {
+   block = document.querySelector(hash);
+   return block ;
+})
+
 let menuHeight = document.querySelector(".nav-menu").offsetHeight;
-
-const animationTime = 300;
-const framesCount = 15;
-let id = 0;
-let lastId = 0;
-let V = .1; // скорость, может иметь дробное значение через точку
-let currentElement = 0;
-let coordY = 0;
-
+let V = .1;
 
 function activeMenuItem() {
-
    menuItems.forEach(elem => {
       elem.addEventListener('click', function (e) {
          e.preventDefault();
@@ -69,8 +33,8 @@ function activeMenuItem() {
                nl.classList.remove('active');
             }
          });
+
          this.classList.add('active');
-        
          document.querySelector(".navbar-collapse").classList.toggle("show")
       }, false);
    });
@@ -102,21 +66,12 @@ function activeMenuItem() {
    }
 
    
-      // scroll page
+   // scroll page
 
 function scrollPage(){
    let menuItems = Array.from(document.querySelectorAll(".item"));
-
-   let sections = menuItems.map(el => {
-      hash = el.href.replace(/[^#]*(.*)/, '$1'); 
-      block = document.querySelector(hash);
-      return block ;
-   })
-
-
-   let menuHeight = document.querySelector(".nav-menu").offsetHeight;
-
    window.addEventListener('scroll', activeBlock);
+
    function activeBlock(){
       sections.forEach(item => {
          let start = item.offsetTop - menuHeight;
@@ -128,7 +83,6 @@ function scrollPage(){
             menuItems[index].classList.add("active");
          }
       })
-
    }
 }
 
