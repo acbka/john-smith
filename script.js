@@ -52,7 +52,7 @@ const animationTime = 300;
 const framesCount = 15;
 let id = 0;
 let lastId = 0;
-let V = .2; // скорость, может иметь дробное значение через точку
+let V = .1; // скорость, может иметь дробное значение через точку
 let currentElement = 0;
 let coordY = 0;
 
@@ -76,7 +76,7 @@ function activeMenuItem() {
    });
 }
 
-   //scroll menu
+   // scroll menu
 
    function scrollMenu(item) {
       var w = window.pageYOffset;
@@ -101,62 +101,9 @@ function activeMenuItem() {
       };
    }
 
-   /*
-   function scrollMenu(element) {
-      let windowScroll = window.pageYOffset;
-      hash = element.href.replace(/[^#]*(.*)/, '$1'); 
-      //topOfElement = document.querySelector(hash).getBoundingClientRect().top;
+   
+      // scroll page
 
-      //changes start
-      start = null;
-      id = menuItems.indexOf(element);
-      if (id > lastId) {
-         for (let i = lastId + 1; i <= id; i++){
-         topOfElement = document.querySelector(anchors[i]).getBoundingClientRect().top;
-         requestAnimationFrame(step);
-         //console.log("active", document.querySelector(".active"));
-         //console.log("start", menuItems[i - 1])
-         menuItems[i - 1].classList.remove("active");
-         menuItems[i].classList.add("active")
-         //console.log("menuItem = ", menuItems[i])
-         }
-      } else if (id < lastId){
-         for (let i = lastId - 1; i >= id; i--){
-            topOfElement = document.querySelector(anchors[i]).getBoundingClientRect().top;
-            requestAnimationFrame(step);
-            //console.log("active", document.querySelector(".active"));
-            //console.log("start", menuItems[i + 1])
-            menuItems[i + 1].classList.remove("active");
-            menuItems[i].classList.add("active")
-            //console.log("menuItem = ", menuItems[i])
-         }
-      }
-      lastId = id;
-      //canges end
-     // start = null;
-
-      //requestAnimationFrame(step);
-
-      function step(time) {
-         if (start === null) start = time;
-         let progress = time - start;
-         scroll(progress)
-
-      };
-
-      function scroll(progress){
-         coordY = (topOfElement < 0 ? Math.max(windowScroll - progress / V, windowScroll + topOfElement) : Math.min(windowScroll + progress / V, windowScroll + topOfElement));
-         window.scrollTo(0, coordY);
-         if (coordY != windowScroll + topOfElement) {
-            requestAnimationFrame(step)
-         } else { 
-            window.scrollTo(0, topOfElement + windowScroll - menuHeight)
-            //location.hash = hash  -  URL с хэшем если меню не fixed
-         }
-      }
-   }
-*/
-      //scroll scroll page
 function scrollPage(){
    let menuItems = Array.from(document.querySelectorAll(".item"));
 
@@ -173,7 +120,7 @@ function scrollPage(){
    function activeBlock(){
       sections.forEach(item => {
          let start = item.offsetTop - menuHeight;
-         let end = item.offsetTop + item.offsetHeight/2 - menuHeight;
+         let end = item.offsetTop + item.offsetHeight/1.5;
          if (pageYOffset > start && pageYOffset < end){
             let act = document.querySelector(".active")
             document.querySelector(".active").classList.remove("active");
