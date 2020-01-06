@@ -54,7 +54,7 @@ function activeMenuItem() {
          let menuHeight = document.querySelector(".nav-menu").offsetHeight;
 
          if (start === null) start = time;
-         
+
          let progress = time - start;
          r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
          window.scrollTo(0, r);
@@ -78,7 +78,7 @@ function scrollPage(){
    function activeBlock(){
       sections.forEach(item => {
          let start = item.offsetTop - menuHeight;
-         let end = item.offsetTop + item.offsetHeight/1.5;
+         let end = item.offsetTop + item.offsetHeight/1.3;
 
          if (pageYOffset > start && pageYOffset < end){
             let act = document.querySelector(".active")
