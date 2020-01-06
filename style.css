@@ -120,6 +120,7 @@ ul{
    height: 70px;
    text-transform: uppercase;
    width: 210px;
+   transition: all .2s;
 }
 .main-button:hover,
 .main-button:active
