@@ -46,6 +46,7 @@ function activeMenuItem() {
       var w = window.pageYOffset;
       hash = item.href.replace(/[^#]*(.*)/, '$1'); 
       t = document.querySelector(hash).getBoundingClientRect().top; 
+
       start = null;
    
       requestAnimationFrame(step);
@@ -81,7 +82,6 @@ function scrollPage(){
          let end = item.offsetTop + item.offsetHeight/1.3;
 
          if (pageYOffset > start && pageYOffset < end){
-            let act = document.querySelector(".active")
             document.querySelector(".active").classList.remove("active");
             let index = sections.indexOf(item);
             menuItems[index].classList.add("active");
@@ -89,6 +89,41 @@ function scrollPage(){
       })
    }
 }
+
+function portfolio(selector){
+   let imageSelector = "." + selector;
+   let linkSelector = selector + "-link";
+   let images = document.querySelectorAll(".portfolio-img");
+   let currentArray = document.querySelectorAll(imageSelector);
+   let links = document.querySelectorAll(".nav-link");
+
+   images.forEach(image => {
+      if(image.classList.contains("showed")) {
+         image.classList.remove("showed")
+      }
+      image.classList.add("hidden")
+   })
+   
+   currentArray.forEach(image => {
+      image.classList.remove("hidden");
+      image.classList.add("showed")
+   })
+
+   links.forEach(link => {
+      if(link.classList.contains("active")) {
+         link.classList.remove("active");
+      }
+ 
+      if (link.classList.contains(linkSelector)) {
+         link.classList.add("active");
+      }
+   })
+
+
+   
+}
+
+
 
 activeMenuItem();
 scrollPage()
