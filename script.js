@@ -90,6 +90,8 @@ function scrollPage(){
    }
 }
 
+   // show portfolio
+
 function portfolio(selector){
    let imageSelector = "." + selector;
    let linkSelector = selector + "-link";
@@ -98,15 +100,13 @@ function portfolio(selector){
    let links = document.querySelectorAll(".nav-link");
 
    images.forEach(image => {
-      if(image.classList.contains("showed")) {
-         image.classList.remove("showed")
+      if(!image.classList.contains("hidden")) {
+         image.classList.add("hidden");
       }
-      image.classList.add("hidden")
    })
    
    currentArray.forEach(image => {
       image.classList.remove("hidden");
-      image.classList.add("showed")
    })
 
    links.forEach(link => {
