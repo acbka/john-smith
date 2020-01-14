@@ -117,10 +117,7 @@ function portfolio(selector){
       if (link.classList.contains(linkSelector)) {
          link.classList.add("active");
       }
-   })
-
-
-   
+   }) 
 }
 
 
